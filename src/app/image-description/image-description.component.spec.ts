@@ -32,7 +32,6 @@ describe('ImageDescriptionComponent', () => {
     let image_description = fixture.debugElement.queryAll(By.css('p')).map(
       (debugElement:DebugElement) => debugElement.nativeElement.innerHTML
     )
-    console.log("aux",image_description); 
     expect(image_description).toContain('image-description works!');
   });
 });
