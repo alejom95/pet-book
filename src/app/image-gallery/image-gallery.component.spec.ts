@@ -97,68 +97,67 @@ describe('ImageGalleryComponent', () => {
       expect(pipe.transform(component.allImages,"gallina").length).toEqual(0);
     });
 
-    it("cuando se carga la vista, debe existir un elemento contenedor de imagenes con la clase img con las 5 imágenes", () => {
-      
-      fixture.detectChanges();
-      let imageElements = fixture.debugElement.queryAll(By.css('img'));
-
-      let images = imageElements.map(
-        (debugElement:DebugElement) =>debugElement.nativeElement
-      );
-      expect(images.length).toEqual(5);
-    });
-
-    it("cuando se carga la vista, debe existir un elemento contenedor de los botones con clase button con los botones de filtros(All, Perro, Gato)", () =>{
-      var filters = ['All','Perro','Gato'];
-      fixture.detectChanges();
-      var botones = fixture.debugElement.queryAll(By.css('button'));
-      let boton = botones.map(
-        (debugElement:DebugElement) => debugElement.nativeElement.innerHTML
-      );
-
-      for(var i in boton){
-        expect(boton[i]).toEqual(filters[i]);
-      }      
-    });
-
-    it('Cuando se de click en el botón "filterBy=all" se deben mostrar 5 imágenes en el contenedor de imágenes de clase img', fakeAsync(() =>{
-      fixture.detectChanges();
-      var buttons = fixture.debugElement.queryAll(By.css('button'));
-      var button = buttons[0];
-      button.triggerEventHandler('click',{});
-      tick();
-      fixture.detectChanges();
-      let imageElements = fixture.debugElement.queryAll(By.css('img'));
-      expect(imageElements.length).toEqual(5);
-     
-    }));
-
-
-    it('Cuando se de click en el botón "filterBy=perro" se deben mostrar 3 imágenes en el contenedor de imágenes de clase img, correspondientes a las imágenes de perros', fakeAsync(() =>{
-      fixture.detectChanges();
-      var buttons = fixture.debugElement.queryAll(By.css('button'));
-      var button = buttons[1];
-      button.triggerEventHandler('click',{});
-      tick();
-      fixture.detectChanges();
-      let imageElements = fixture.debugElement.queryAll(By.css('img'));
-      expect(imageElements.length).toEqual(3);
-    }));
-
-    it('Cuando se de click en el botón "filterBy=gato" se deben mostrar 2 imágenes en el contenedor de imágenes de clase img, correspondientes a las imágenes de gatos', fakeAsync(() =>{
-      fixture.detectChanges();
-      var buttons = fixture.debugElement.queryAll(By.css('button'));
-      var button = buttons[2];
-      button.triggerEventHandler('click',{});
-      tick();
-      fixture.detectChanges();
-      let imageElements = fixture.debugElement.queryAll(By.css('img'));
-      expect(imageElements.length).toEqual(2);
-    }));
-
-    
-    
   });
+
+
+  it("cuando se carga la vista, debe existir un elemento contenedor de imagenes con la clase img con las 5 imágenes", () => {
+      
+    fixture.detectChanges();
+    let imageElements = fixture.debugElement.queryAll(By.css('img'));
+
+    let images = imageElements.map(
+      (debugElement:DebugElement) =>debugElement.nativeElement
+    );
+    expect(images.length).toEqual(5);
+  });
+
+  it("cuando se carga la vista, debe existir un elemento contenedor de los botones con clase button con los botones de filtros(All, Perro, Gato)", () =>{
+    var filters = ['All','Perro','Gato'];
+    fixture.detectChanges();
+    var botones = fixture.debugElement.queryAll(By.css('button'));
+    let boton = botones.map(
+      (debugElement:DebugElement) => debugElement.nativeElement.innerHTML
+    );
+
+    for(var i in boton){
+      expect(boton[i]).toEqual(filters[i]);
+    }      
+  });
+
+  it('Cuando se de click en el botón "filterBy=all" se deben mostrar 5 imágenes en el contenedor de imágenes de clase img', fakeAsync(() =>{
+    fixture.detectChanges();
+    var buttons = fixture.debugElement.queryAll(By.css('button'));
+    var button = buttons[0];
+    button.triggerEventHandler('click',{});
+    tick();
+    fixture.detectChanges();
+    let imageElements = fixture.debugElement.queryAll(By.css('img'));
+    expect(imageElements.length).toEqual(5);
+   
+  }));
+
+
+  it('Cuando se de click en el botón "filterBy=perro" se deben mostrar 3 imágenes en el contenedor de imágenes de clase img, correspondientes a las imágenes de perros', fakeAsync(() =>{
+    fixture.detectChanges();
+    var buttons = fixture.debugElement.queryAll(By.css('button'));
+    var button = buttons[1];
+    button.triggerEventHandler('click',{});
+    tick();
+    fixture.detectChanges();
+    let imageElements = fixture.debugElement.queryAll(By.css('img'));
+    expect(imageElements.length).toEqual(3);
+  }));
+
+  it('Cuando se de click en el botón "filterBy=gato" se deben mostrar 2 imágenes en el contenedor de imágenes de clase img, correspondientes a las imágenes de gatos', fakeAsync(() =>{
+    fixture.detectChanges();
+    var buttons = fixture.debugElement.queryAll(By.css('button'));
+    var button = buttons[2];
+    button.triggerEventHandler('click',{});
+    tick();
+    fixture.detectChanges();
+    let imageElements = fixture.debugElement.queryAll(By.css('img'));
+    expect(imageElements.length).toEqual(2);
+  }));
 
 
 });
