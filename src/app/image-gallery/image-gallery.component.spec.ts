@@ -100,6 +100,7 @@ describe('ImageGalleryComponent', () => {
   });
 
 
+
   it("cuando se carga la vista, debe existir un elemento contenedor de imagenes con la clase img con las 5 imágenes", () => {
       
     fixture.detectChanges();
@@ -111,7 +112,7 @@ describe('ImageGalleryComponent', () => {
     expect(images.length).toEqual(5);
   });
 
-  it("cuando se carga la vista, debe existir un elemento contenedor de los botones con clase button con los botones de filtros(All, Perro, Gato)", () =>{
+  it("cuando se carga la vista, debe existir un elemento contenedor de los botones con clase button con los botones de filtros", () =>{
     var filters = ['All','Perro','Gato'];
     fixture.detectChanges();
     var botones = fixture.debugElement.queryAll(By.css('button'));
