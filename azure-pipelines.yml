@@ -19,6 +19,19 @@ steps:
     ls     
   displayName: 'npm install, unitTest and build'
 
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'sonarCloudUdem'
+    organization: 'alejom95'
+    scannerMode: 'MSBuild'
+    projectKey: 'sonar_could_udem'
+    projectName: 'sonarCould_udem'
+
+- task: SonarCloudAnalyze@1
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
 
 - task: ArchiveFiles@2
   inputs:
