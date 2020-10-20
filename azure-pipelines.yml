@@ -23,7 +23,8 @@ steps:
   inputs:
     SonarCloud: 'sonarCloudUdem'
     organization: 'alejom95'
-    scannerMode: 'MSBuild'
+    scannerMode: 'CLI'
+    configMode: 'file'
     projectKey: 'sonar_could_udem'
     projectName: 'sonarCould_udem'
 
