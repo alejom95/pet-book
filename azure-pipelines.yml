@@ -25,6 +25,8 @@ steps:
     organization: 'alejom95'
     scannerMode: 'CLI'
     configMode: 'file'
+    projectKey: 'sonar_could_udem'
+    projectName: 'sonarCould_udem'
 
 - task: SonarCloudAnalyze@1
 
