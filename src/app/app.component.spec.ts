@@ -14,7 +14,11 @@ describe('AppComponent', () => {
     }).compileComponents();
   }));
 
-  
+  it('debe crear el componente', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
+  });
 
   it('cuando se crea el componente debe tener el titulo "pet-book"', () => {
     const fixture = TestBed.createComponent(AppComponent);
