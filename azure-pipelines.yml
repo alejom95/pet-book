@@ -25,7 +25,7 @@ steps:
     SonarCloud: 'azure-devopsUdem2'
     organization: 'alejom95'
     scannerMode: 'CLI'
-    configFile: 'sonar_project.properties'
+    configFile: 'dis/pet-book/sonar_project.properties'
     
   
 - task: SonarCloudAnalyze@1
