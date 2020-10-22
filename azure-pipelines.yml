@@ -25,6 +25,8 @@ steps:
     organization: 'alejom95'
     scannerMode: 'CLI'
     projectKey: 'alejom95_pet-book'
+    projectName: 'pet-book'
+    configFile: 'file'
 
 - task: SonarCloudAnalyze@1
 
