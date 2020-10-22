@@ -23,7 +23,7 @@ steps:
   inputs:
     SonarCloud: 'azure-devopsUdem2'
     organization: 'alejom95'
-    scannerMode: 'CLI
+    scannerMode: 'CLI'
     configFile: 'file'
 
 - task: SonarCloudAnalyze@1
