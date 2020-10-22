@@ -18,6 +18,22 @@ steps:
     ls /coverage
     ls     
   displayName: 'npm install, unitTest and build'
+  
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'azure-devopsUdem2'
+    organization: 'alejom95'
+    scannerMode: 'CLI'
+    projectKey: 'alejom95_pet-book'
+    projectName: 'pet-book'
+    configFile: 'file'
+  
+- task: SonarCloudAnalyze@1
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
 
 - task: ArchiveFiles@2
   inputs:
