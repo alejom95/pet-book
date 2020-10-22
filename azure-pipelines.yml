@@ -23,9 +23,7 @@ steps:
   inputs:
     SonarCloud: 'azure-devopsUdem2'
     organization: 'alejom95'
-    scannerMode: 'CLI'
-    projectKey: 'alejom95_pet-book'
-    projectName: 'pet-book'
+    scannerMode: 'CLI
     configFile: 'file'
 
 - task: SonarCloudAnalyze@1
