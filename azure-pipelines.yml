@@ -26,7 +26,7 @@ steps:
     organization: 'alejom95'
     scannerMode: 'CLI'
     configMode: 'file'
-    configFile: 'sonar_project.properties'
+    configFile: './sonar-project.properties'
     
   
 - task: SonarCloudAnalyze@1
