@@ -43,4 +43,13 @@ steps:
     archiveFile: '$(Build.ArtifactStagingDirectory)/pet-book-$(Build.BuildId).zip'
     replaceExistingArchive: true
 
+- task: S3Upload@1
+  inputs:
+    awsCredentials: 'aws-devopsUdem'
+    regionName: 'us-east-2'
+    bucketName: 'bucketpruebapet-book'
+    globExpressions: '*.zip'
+    targetFolder: 'artefactos'
+    createBucket: true
+
 - task: PublishBuildArtifacts@1
