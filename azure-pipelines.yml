@@ -51,6 +51,7 @@ steps:
     awsCredentials: 'aws-devopsUdem'
     regionName: 'us-east-2'
     bucketName: 'bucketpruebapet-book'
+    sourceFolder: './'
     globExpressions: '*.zip'
     targetFolder: 'artefactos'
     createBucket: true
