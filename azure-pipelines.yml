@@ -42,6 +42,9 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/pet-book-$(Build.BuildId).zip'
     replaceExistingArchive: true
+    
+
+- task: PublishBuildArtifacts@1
 
 - task: S3Upload@1
   inputs:
@@ -52,4 +55,3 @@ steps:
     targetFolder: 'artefactos'
     createBucket: true
 
-- task: PublishBuildArtifacts@1
