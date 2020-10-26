@@ -10,6 +10,7 @@ export class ImageDescriptionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
