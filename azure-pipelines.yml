@@ -64,7 +64,7 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'docker_hub'
-    repository: 'pet-book-udem'
+    repository: 'alejandrom24/pet-book-udem'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     buildContext: '.'
