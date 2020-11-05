@@ -66,9 +66,9 @@ steps:
     containerRegistry: 'docker_hub'
     repository: 'pet-book-udem'
     command: 'buildAndPush'
-    Dockerfile: './Dockerfile'
-    buildContext: '**'
-    tags: 'pet-book-udem:$(Build.BuildId)'
+    Dockerfile: '**/Dockerfile'
+    buildContext: '.'
+    tags: 'alejandrom24/imagenPrueba:$(Build.BuildId)'
 
     
 
