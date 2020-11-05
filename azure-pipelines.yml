@@ -68,7 +68,7 @@ steps:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     buildContext: '.'
-    tags: 'alejandrom24/imagenPrueba:$(Build.BuildId)'
+    tags: 'alejandrom24/imagenprueba:$(Build.BuildId)'
 
     
 
