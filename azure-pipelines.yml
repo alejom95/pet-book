@@ -68,7 +68,7 @@ steps:
     command: 'buildAndPush'
     Dockerfile: './Dockerfile'
     buildContext: '**'
-    tags: 'pet-book/udem:$(Build.BuildId)'
+    tags: 'alejandrom24/pet-book-udem:$(Build.BuildId)'
 
     
 
