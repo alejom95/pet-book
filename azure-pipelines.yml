@@ -67,8 +67,8 @@ steps:
     repository: 'pet-book-udem'
     command: 'buildAndPush'
     Dockerfile: './Dockerfile'
-    buildContext: '.'
-    tags: '$(Build.BuildId)'
+    buildContext: '**'
+    tags: 'pet-book/udem:$(Build.BuildId)'
 
     
 
